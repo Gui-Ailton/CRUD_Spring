@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: red;
+}
+
+.top{
+    height: 50px;
+    width: 100vw;
+    background-color: black;
+    opacity: 0.8;
+}
+
+a{
+    text-decoration: none;
+}

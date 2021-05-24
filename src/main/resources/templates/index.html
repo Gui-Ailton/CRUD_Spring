@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursos</title>
+   <!--LINK DO CARALHO <link rel="stylesheet" type="text/css" href="../static/CSS/estilo.css"> -->
+
+   <style>
+       *{
+           overflow: hidden;
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Times New Roman', Times, serif;
+       }
+       .btn{
+           box-shadow: 5px 2px 25px 2px white;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 0.7rem;
+           position: absolute;
+           top: 500px;
+           left: 0;
+           right: 0;
+           border-radius: 50px;
+           text-align: center;
+           background-color: black;
+           opacity: 0.8;
+           color: white;
+           margin: 0 auto;
+           border: 1px solid white;
+           height: 25px;
+           width: 200px;
+       }
+    
+     
+
+       a{
+           font-size: 0.7rem;
+           text-transform: uppercase;
+           margin: 10px;
+           padding: 10px;
+           color: #e7e7e7;
+           text-decoration: none;
+       }
+
+       li{
+           list-style: none;
+       }
+
+       .top{
+           height: 50px;
+           width: 100vw;
+           background-color: #2a2a2a;
+
+       }
+
+       header{
+           display: flex;
+           justify-content:space-between;
+           align-items: center;
+       }
+
+       nav ul{
+           display: flex;
+       }
+      
+       .menu{
+          
+           margin-right: 250px;
+       }
+
+       img{
+          width: 100px;
+          height: 40px;
+          background-size: cover;
+          margin-left: 50px;
+       }
+
+      nav ul a{
+           text-shadow: 2px 0px 2px rgb(102, 102, 102);
+       }
+
+      nav ul a:hover{
+           text-decoration: underline;
+           
+
+       }
+
+       .fundo{
+           margin: 0 auto;
+           height: 100vh;
+           width: 100vw;
+           background-size: cover;
+           background-position: center;
+           
+
+       }
+       .flex{
+          display: flex;
+          flex-direction: column;
+       }
+
+       .ab{
+           
+        box-shadow: 2px 0px 15px 2px #ecbbf8;
+           border-radius: 50px;
+           text-align: center;
+           position: absolute;
+           top: 220px;
+           right: 0px;
+           left: 50%;
+           margin-left: -300px;
+           width: 600px;
+           height: 250px;
+           background-color: black;
+           opacity: 0.6;
+       }
+       .ab li{
+           margin: 10px;
+       }
+
+       .ab li a{
+           text-shadow: 20px 2px 20px 2px #ecbbf8;
+           color:white;
+           font-weight: bold;
+           font-size: 1rem;
+       }
+
+       .ab li a:hover{
+           color: #ecbbf8;
+       }
+      
+
+      
+   </style>
+</head>
+<body>
+    
+    <header class="top">
+        
+        <a href="index.html"><img src="https://pngimg.com/uploads/fortnite/fortnite_PNG139.png"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="">Modos</a></li>
+                <li><a href="">Passe de batalha</a></li>
+                <li><a href="">Tripulação</a></li>
+                <li><a href="">V-bucks</a></li>
+                <li><a href="">Competitivo</a></li>
+                <li><a href="">Noticias</a></li>
+                <li><a href="">Cosplay</a></li>
+                <li><a href="">Ajuda</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="flex">
+       <img class="fundo" src="https://images4.alphacoders.com/937/thumb-1920-937844.png"> 
+
+    
+    <section class="ab">
+    <ul>
+        <li class="mg" th:each="curso : ${lista}">
+
+            <a  th:href="@{/detalhes/{id}(id=${curso.id})}" th:text="${curso.nome}"></a>
+            <a th:href="@{/editar/{id}(id=${curso.id})}">Editar</a>
+            <a th:href="@{/deletar/{id}(id=${curso.id})}">Deletar</a>
+        </li>
+          
+    </ul>
+    </section>
+
+    <a class="btn" href="/cadastro">Novo Contato</a>
+
+    </section>
+</body>
+</html>

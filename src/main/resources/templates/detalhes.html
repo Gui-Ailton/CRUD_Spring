@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes</title>
+    <style>
+              *{
+           overflow: hidden;
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Times New Roman', Times, serif;
+       }
+      /* .btn{
+           box-shadow: 5px 2px 25px 2px white;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 0.7rem;
+           position: absolute;
+           top: 595px;
+           left: 0;
+           right: 0;
+           border-radius: 50px;
+           text-align: center;
+           background-color: black;
+           opacity: 0.8;
+           color: white;
+           margin: 0 auto;
+           border: 1px solid white;
+           height: 25px;
+           width: 200px;
+       }
+       */
+
+       .btn{
+           position: absolute;
+           top: -10px;
+           right:0px;
+           left: 0;
+           margin-left: -450px;
+        
+       }
+    
+
+       .btn-2{
+           border: 1px solid black;
+           text-transform: uppercase;
+           cursor: pointer;
+           border-radius: 50px;
+           margin-top: 15px;
+           width: 150px;
+           height: 25px;
+           box-shadow: 5px 2px 15px 2px black;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 0.7rem;
+           background-color: white;
+           opacity: 0.9;
+           color: black;
+       }
+    
+     
+
+       a{
+           font-size: 0.7rem;
+           text-transform: uppercase;
+           margin: 10px;
+           padding: 10px;
+           color: #e7e7e7;
+           text-decoration: none;
+       }
+
+       li{
+           list-style: none;
+       }
+
+       .top{
+           height: 50px;
+           width: 100vw;
+           background-color: #2a2a2a;
+
+       }
+
+       header{
+           display: flex;
+           justify-content:space-between;
+           align-items: center;
+       }
+
+       nav ul{
+           display: flex;
+       }
+      
+       .menu{
+          
+           margin-right: 250px;
+       }
+
+       img{
+          width: 100px;
+          height: 40px;
+          background-size: cover;
+          margin-left: 50px;
+       }
+
+      nav ul a{
+           text-shadow: 2px 0px 2px rgb(102, 102, 102);
+       }
+
+      nav ul a:hover{
+           text-decoration: underline;
+           
+
+       }
+
+       .fundo{
+           margin: 0 auto;
+           height: 100vh;
+           width: 100vw;
+           background-size: cover;
+           background-position: center;
+           
+
+       }
+
+       .fdp{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           text-align: center;
+           position: absolute;
+           top: 300px;
+           right: 0;
+           left: 50%;
+           height:200px;
+           width: 500px;
+           margin-left: -250px;
+           background-color: black;
+           opacity: 0.8;
+           border-radius: 20px;
+           box-shadow: 5px 2px 15px #ecbbf8;
+       }
+
+       h1,h2{
+           color: white;
+           margin: 50px;
+           font-size: 1rem;
+           margin: 0 auto;
+       }
+    </style>
+</head>
+<body>
+
+    <header class="top">
+        
+        <a href="index.html"><img src="https://pngimg.com/uploads/fortnite/fortnite_PNG139.png"></a>
+        <nav class="menu">
+            <ul>
+                <li><a href="">Modos</a></li>
+                <li><a href="">Passe de batalha</a></li>
+                <li><a href="">Tripulação</a></li>
+                <li><a href="">V-bucks</a></li>
+                <li><a href="">Competitivo</a></li>
+                <li><a href="">Noticias</a></li>
+                <li><a href="">Cosplay</a></li>
+                <li><a href="">Ajuda</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="flex">
+        <img class="fundo" src="https://images4.alphacoders.com/937/thumb-1920-937844.png">
+
+    <section class="fdp">
+    <h1 th:text="${curso.nome}"></h1>
+    <h2 th:text="${curso.descricao}"></h2>
+    <h2 th:text="${curso.valor}"></h2>
+    
+    <a class="btn" href="/"><img src="https://cdn.icon-icons.com/icons2/1134/PNG/128/1486348819-back-backwards-repeat-arrows-arrow-blue_80473.png"></a>
+    </section>
+</body>
+</html>
